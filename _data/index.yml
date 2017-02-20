@@ -1,0 +1,10 @@
+---
+About:
+  body-text: My name is Ujjwal Nadhani. I live in Palo Alto, California and attend Palo Alto High School. I am a proficient web and iPhone developer. I have taken several design and programming courses. Along with iPhone and web development, I enjoy playing soccer and watching Netflix.
+  languages:
+      
+      -
+        name: Swift
+        image: assets/CSS.3.svg.png
+      
+...
