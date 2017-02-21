@@ -59,9 +59,39 @@
   <div class="col-lg-12 body-text-section">
     <p class="body-text"> {{site.data.index.About.body-text}} </p>
     <h2>Languages I Know</h2>
-    <div class="row">
+    <div class="row" style="padding-top: 50px;">
+      <div class="col-md-4 language-div">
+          <div class="image-container">
+              <img src="assets/Swift_logo.svg.png" class="language-image">
+                <div class="hoverinfo">
+                  <p class="language-title">Swift</p>
+                  <p class="language-body">Swift is a language developed by Apple for coding iPhones.</p>
+                </div>
+          </div>
+      </div>
+
+      <div class="col-md-4 language-div">
+        <img src="assets/Unofficial_JavaScript_logo_2.svg.png" class="language-image">
+      </div>
+
+      <div class="col-md-4 language-div">
+        <img src="assets/Python.svg.png" class= "language-image">
+      </div>
     </div>
-    <p> Swift, JavaScript, Python, HTML, CSS, Java</p> 
+    <div class="row" style="padding-top: 45px;">
+      <div class="col-md-4 language-div">
+        <img src="assets/HTML5_logo_and_wordmark.svg.png" class="language-image">
+      </div>
+
+      <div class="col-md-4 language-div">
+        <img src="assets/CSS.3.svg.png" class="language-image">
+      </div>
+
+      <div class="col-md-4 language-div">
+        <img src="assets/Fondo_Java.png" class= "language-image">
+      </div>
+    </div>
+<!--     <p> Swift, JavaScript, Python, HTML, CSS, Java</p>  -->
   </div>
 </div>
 
@@ -147,7 +177,7 @@ h1{
 h2{
   padding-top: 25px;
   padding-bottom: 25px;
-  font-size: 45px !important;
+  font-size: 55px !important;
   font-weight: 200 !important;
   font-family: 'Montserrat', sans-serif;
   color: #353B3C;
@@ -174,8 +204,60 @@ p.body-text{
 }
 .section-text{
   background-color: #FFFBFC; 
-  height: 100%;
+  height: auto;
   opacity: 0.85;
+}
+
+.language-div{
+  padding-bottom: 30px; 
+}
+
+.language-image{
+  height: auto;
+  max-width: 250px !important;
+}
+
+.hoverinfo {
+  position: absolute;
+  top: 0px;
+  height: 100%;
+  width: 100%;
+/*  background-color: rgba(0, 0, 0, 0.75);*/
+}
+
+.hoverinfo p {
+  display: none;
+}
+
+.hoverinfo:hover{
+  background-color: rgba(0, 0, 0, 0.75);
+  display: block;
+}
+
+.hoverinfo:hover p{
+  display: block;
+}
+
+.image-container{
+  position: relative !important;
+  display: inline-block !important;
+}
+
+.language-title{
+  padding-top: 15px;
+  font-size: 35px;
+  font-weight: 200;
+  font-family: 'Montserrat', sans-serif;
+  color: white;
+}
+
+.language-body{
+  font-family: 'Crimson Text', sans-serif;
+  font-size: 20px;
+  color: white;
+  padding-left: 5px;
+  padding-right: 5px;
+  padding-bottom: 5px;
 }
 </style>
 <script>

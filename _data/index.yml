@@ -1,10 +1,32 @@
 ---
 About:
   body-text: My name is Ujjwal Nadhani. I live in Palo Alto, California and attend Palo Alto High School. I am a proficient web and iPhone developer. I have taken several design and programming courses. Along with iPhone and web development, I enjoy playing soccer and watching Netflix.
-  languages:
+  
+  languages-one:
       
       -
         name: Swift
-        image: assets/CSS.3.svg.png
+        image: assets/Swift_logo.svg.png
+        description: Swift is a language developed by Apple for coding iPhones.
+
+      -
+        name: JavaScript
+        image: assets/Unofficial_JavaScript_logo_2.svg.png
+        description: JavaScript is used in websites to make them interactive.
+      
+      -
+        name: Python
+        image: assets/Python.svg.png
+        description: Python is mainly used in web servers.
+  
+  languages-two:
+
+      -
+        name: HTML
+        image: assets/HTML5_logo_and_wordmark.svg.png
+        description: HTML is the backbone of wesites.
+
+  
+
       
 ...
