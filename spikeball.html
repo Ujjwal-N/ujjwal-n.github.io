@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+
+    <title>SpikeWeb</title>
+  </head>
+  <body>
+  	<div class="container">
+    	<h1> Spike Tournament Setup </h1>
+    
+    	<form>
+    		<div class="form-group">
+    			<label for="exampleInputEmail1">Enter Players</label>
+    			<input class="form-control" type="text" placeholder="Alice,Bob,Chris" id="names">
+    			<small id="emailHelp" class="form-text text-muted">Seperate names with a space. Example: Alice Bob Chris</small>
+    		</div>
+    		<div class="btn btn-primary" onClick="handleNames()">Submit</button>
+    	</form>
+	</div>
+	 <!-- Insert these scripts at the bottom of the HTML, but before you use any Firebase services -->
+
+  <!-- Firebase App (the core Firebase SDK) is always required and must be listed first -->
+  <script src="https://www.gstatic.com/firebasejs/7.16.1/firebase-app.js"></script>
+
+  <!-- If you enabled Analytics in your project, add the Firebase SDK for Analytics -->
+  <script src="https://www.gstatic.com/firebasejs/7.16.1/firebase-analytics.js"></script>
+
+  <!-- Add Firebase products that you want to use -->
+<script src="https://www.gstatic.com/firebasejs/7.16.1/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/7.16.1/firebase-firestore.js"></script>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+    <script>
+  	// Your web app's Firebase configuration
+  	var firebaseConfig = {
+    	apiKey: "AIzaSyC0ZtVNGtQFIk1CCEXPjhAdJs701Il5FKY",
+    	authDomain: "spikeball-caa90.firebaseapp.com",
+    	databaseURL: "https://spikeball-caa90.firebaseio.com",
+    	projectId: "spikeball-caa90",
+    	storageBucket: "spikeball-caa90.appspot.com",
+    	messagingSenderId: "331321447492",
+    	appId: "1:331321447492:web:d578044494b17afb51d811"
+  	};
+  	// Initialize Firebase
+  	firebase.initializeApp(firebaseConfig);
+  	var db = firebase.firestore();
+  	var currentTournamentRef = db.collection('tournaments').doc('IVBLpFWH3elq2HNhEvtS');
+
+  	function setPlayers(players){
+	var setWithMerge = currentTournamentRef.set({
+    	Players: players
+		}, { merge: true });
+  	}
+  	function handleNames(){
+  		var txtF = document.getElementById("names").value;
+  		var res = txtF.split(" ");
+  		if(res.length > 1){
+  			setPlayers(res);
+  		}
+  	}
+
+  </script>
+
+
+  </body>
+</html>
